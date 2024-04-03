@@ -8,6 +8,7 @@ export default {
   project: {
     link: "https://github.com/hivello/doc",
   },
+  docsRepositoryBase: "https://github.com/hivello/doc",
   faviconGlyph: "✒️",
   useNextSeoProps() {
     const { asPath } = useRouter();
@@ -28,6 +29,9 @@ export default {
   feedback: {
     content: () => <>Question? Give me feedback →</>,
     labels: "feedback",
-    useLink: () => "https://github.com/hivello/doc/issues/new",
   },
+  toc: {
+    backToTop: true,
+  },
+  gitTimestamp: () => new Date().toString(),
 };
