@@ -6,7 +6,7 @@ export default {
   logo: <Logo />,
   logoLink: "https://hivello.com",
   project: {
-    link: "",
+    link: "https://github.com/hivello/doc",
   },
   faviconGlyph: "✒️",
   useNextSeoProps() {
@@ -28,6 +28,6 @@ export default {
   feedback: {
     content: () => <>Question? Give me feedback →</>,
     labels: "feedback",
-    useLink: () => "",
+    useLink: () => "https://github.com/hivello/doc/issues/new",
   },
 };
