@@ -2,9 +2,15 @@ import Image from "next/image";
 
 export function Logo() {
   return (
-    <div className="flex items-center gap-2">
-      <Image src="/logo.png" alt="Logo" width={30} height={30} />
-      <span className="font-bold">Hivello Documentation</span>
+    <div className="flex items-center gap-4">
+      <Image
+        src="/logo-hivello.svg"
+        alt="Logo"
+        width={180}
+        height={57}
+        priority
+      />
+      <span className="font-bold">Documentation</span>
     </div>
   );
 }

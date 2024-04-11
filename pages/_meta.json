@@ -1,6 +1,4 @@
 {
-  "docs": {
-    "title": "Docs",
-    "type": "page"
-  }
+  "index": "Getting Started",
+  "quick-start": "Quick Start"
 }
