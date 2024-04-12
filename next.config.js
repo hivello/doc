@@ -1,12 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  images: {
-    unoptimized: true,
-  },
   reactStrictMode: true,
   swcMinify: true,
-  // trailingSlash: true,
   basePath: "",
 };
 
@@ -15,7 +11,4 @@ const withNextra = require("nextra")({
   themeConfig: "./theme.config.jsx",
 });
 
-module.exports = {
-  ...withNextra(),
-  ...nextConfig,
-};
+module.exports = withNextra(nextConfig);
