@@ -7,13 +7,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   // trailingSlash: true,
-  basePath: '',
-  output: 'export',
+  basePath: "",
 };
 
-const withNextra = require('nextra')({
-  theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.jsx',
+const withNextra = require("nextra")({
+  theme: "nextra-theme-docs",
+  themeConfig: "./theme.config.jsx",
 });
 
 module.exports = {
