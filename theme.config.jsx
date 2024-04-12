@@ -1,37 +1,47 @@
-import { useRouter } from 'next/router';
-import { Head } from './components/Head';
-import { Logo } from './components/Logo';
+import { useRouter } from "next/router";
+import { Head } from "./components/Head";
+import { Logo } from "./components/Logo";
 
 export default {
   logo: <Logo />,
-  logoLink: 'https://hivello.com',
+  logoLink: "https://docs.hivello.io",
   project: {
-    link: 'https://github.com/hivello/doc',
+    link: "https://github.com/hivello/doc",
   },
-  docsRepositoryBase: 'https://github.com/hivello/doc',
-  faviconGlyph: '✒️',
+  docsRepositoryBase: "https://github.com/hivello/doc",
+  faviconGlyph: "✒️",
   useNextSeoProps() {
     const { asPath } = useRouter();
-    if (asPath !== '/') {
+    if (asPath !== "/") {
       return {
-        titleTemplate: 'Hivello - %s',
+        titleTemplate: "Hivello - %s",
       };
     }
   },
   head: Head,
   i18n: [],
   footer: {
-    text: 'Built by Hivello Team.',
+    text: "Built by Hivello Team.",
   },
   editLink: {
     text: null,
   },
   feedback: {
-    content: () => <>Question? Give me feedback →</>,
-    labels: 'feedback',
+    content: "Question? Give us feedback →",
+    labels: "feedback",
   },
   toc: {
     backToTop: true,
   },
-  // gitTimestamp: () => new Date().toString(),
+  sidebar: {
+    titleComponent({ title, type }) {
+      if (type === "separator") {
+        return <span className="cursor-default">{title}</span>;
+      }
+      return <>{title}</>;
+    },
+    defaultMenuCollapseLevel: 1,
+    toggleButton: true,
+  },
+  primaryHue: 150,
 };
