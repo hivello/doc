@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import { Head } from "./components/Head";
-import { Logo } from "./components/Logo";
+import { LogoDocs } from "./components/LogoDocs";
 
 export default {
-  logo: <Logo />,
+  logo: <LogoDocs />,
   logoLink: "https://docs.hivello.io",
   project: {
     link: "https://github.com/hivello/doc",
