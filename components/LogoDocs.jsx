@@ -22,7 +22,7 @@ export function LogoDocs() {
         height={44}
         priority
       />
-      <span className="font-bold">Documentation</span>
+      <span className="text-primary">Documentation</span>
     </div>
   );
 }
